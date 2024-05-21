@@ -1,37 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './App.css';
-import DropBox from './components/DropBox';
-import { countries } from "./components/Countries"
 import { Context } from './Contex';
 import Input from './components/Input';
 import Output from './components/Output';
+import Footer from './components/Footer';
 
 function App() {
-  const backGroundImages = ["Pyramids", "Colosseum"];
-  let randImage = Math.floor(Math.random() * backGroundImages.length);
-
-  const [backGround, setBackGround] = useState(backGroundImages[randImage]);
+  const backGroundImages = ["Pyramids", "Colosseum","Easter","Taj"];
+  const [backGround, setBackGround] = useState(backGroundImages[Math.floor(Math.random() * backGroundImages.length)]);
   const [countryChosen, setCountryChosen] = useState("");
   const [cityName, setCityName] = useState("");
   const [data, setData] = useState(null);
   const [visibility, setVisibility] = useState(null);
 
-  const changeBackground = () => {
-    let randImage = Math.floor(Math.random() * backGroundImages.length);
+  const changeBackground = useCallback(() => {
+    const randImage = Math.floor(Math.random() * backGroundImages.length);
     setBackGround(backGroundImages[randImage]);
-  };
+  }, [backGroundImages]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       changeBackground();
     }, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [changeBackground]);
 
   function createDate() {
-    let month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    let date = new Date();
-    return (`${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`)
+    const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const date = new Date();
+    return `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`;
   }
 
   return (
@@ -52,6 +49,9 @@ function App() {
             icon={data.weather[0].icon}
           />
         )}
+        <div className='footer'>
+          <Footer></Footer>
+        </div>
       </div>
     </Context.Provider>
   );

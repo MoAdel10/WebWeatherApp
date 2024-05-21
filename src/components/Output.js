@@ -1,11 +1,7 @@
-import { useContext } from "react"
-import { Context } from "../Contex"
+// import { useContext } from "react"
+// import { Context } from "../Contex"
 
 export default function Output({ city, country, date, temp, humidity, pressure,high,low ,visibility,icon}) {
-
-
-    const {countryChosen, setCountryChosen,cityName,setCityName,data,setData} = useContext(Context)
-
    
 
     return (
@@ -17,7 +13,7 @@ export default function Output({ city, country, date, temp, humidity, pressure,h
             <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="Weather icon" />
             <h1>{temp}°C</h1>
             <p>Humidity {humidity}% | High {high}°C Low {low}°C</p>
-            <p>Pressure: {pressure}mb visablitiy:{visibility}</p>
+            {/* <p>Pressure: {pressure}mb visablitiy:{visibility}</p> */}
         </div>
     )
 }

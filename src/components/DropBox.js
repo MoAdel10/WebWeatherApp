@@ -4,7 +4,7 @@ import { Context } from '../Contex';
 
     export default function DropBox({ id, options }) {
 
-    const {countryChosen,setCountryChosen} = useContext(Context);
+    const {setCountryChosen} = useContext(Context);
     const dropList = useRef();
 
     function handleChange() {
