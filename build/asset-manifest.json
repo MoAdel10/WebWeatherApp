@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a8e24c52.css",
+    "main.js": "/static/js/main.e63235f2.js",
+    "static/js/453.b48e9070.chunk.js": "/static/js/453.b48e9070.chunk.js",
+    "static/media/easter.jpg": "/static/media/easter.f98e12af7d5cf1d7c1c5.jpg",
+    "static/media/Taj.jpeg": "/static/media/Taj.026f04c108b149313b9e.jpeg",
+    "static/media/colosseum.jpg": "/static/media/colosseum.5a04991feea577eb6884.jpg",
+    "static/media/Pyramids.jpg": "/static/media/Pyramids.1c078b7e2ca0d6b099f5.jpg",
+    "index.html": "/index.html",
+    "main.a8e24c52.css.map": "/static/css/main.a8e24c52.css.map",
+    "main.e63235f2.js.map": "/static/js/main.e63235f2.js.map",
+    "453.b48e9070.chunk.js.map": "/static/js/453.b48e9070.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8e24c52.css",
+    "static/js/main.e63235f2.js"
+  ]
+}
