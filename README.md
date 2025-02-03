@@ -8,4 +8,5 @@
 <br>
 #How to Use:<br>
 1-in the env.js file add your key <br>
-2-start the development server ( npm start )<br>
+2-install Packages (npm install )
+3-start the development server ( npm start )<br>
